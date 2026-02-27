@@ -26,3 +26,10 @@ At the Golden State Water Treatment Facility, the PE enforces this by checking e
 | **User Identity** | User must be authenticated via Phishing-Resistant MFA and belong to the 'HR_Staff' group. | Grant Access |
 | **Device Posture** | Device must be a corporate-managed asset with an up-to-date EDR agent and disk encryption enabled. | Grant Access |
 | **Network Context** | Connection must originate from a verified Facility IP or a managed Global Secure Access tunnel. | Grant Access |
+
+
+
+# Git Repository Metadata
+
+Filename: ZT-Policy-Profile.md
+Commit Message: [docs: final submission for ZT lab - https://github.com/Guido-Alberdi-Bustillos/Guido-Alberdi-Bustillos]
