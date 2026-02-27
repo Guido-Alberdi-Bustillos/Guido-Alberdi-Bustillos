@@ -16,3 +16,13 @@
 Verify Explicitly means the system should never asume that a user is safe just because they are on the internal network or have logged in once before. Every single access request must be authenticated before access is granted.
 
 At the Golden State Water Treatment Facility, the PE enforces this by checking every request to the HR Employee PII Database. For example, if an HR manager attempts to access an employees background checks, the PE checks not only username and password, but also signals like the geographical location of the user and the time of day. If the request came from an unrecognized IP address outside of California in the middle of the night, then the PE denies the request even if the credentials are correct. This is because the explicit context of the request does not meet certain security requirements.
+
+
+
+## 3. Simplified Policy Table
+
+| Policy Requirement (Signal) | Condition to be Met by User | Action if Condition is Met |
+| :--- | :--- | :--- |
+| **User Identity** | User must be authenticated via Phishing-Resistant MFA and belong to the 'HR_Staff' group. | Grant Access |
+| **Device Posture** | Device must be a corporate-managed asset with an up-to-date EDR agent and disk encryption enabled. | Grant Access |
+| **Network Context** | Connection must originate from a verified Facility IP or a managed Global Secure Access tunnel. | Grant Access |
